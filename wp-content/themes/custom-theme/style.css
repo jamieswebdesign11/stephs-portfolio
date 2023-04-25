@@ -1,0 +1,60 @@
+/*Theme Name: Custom Theme*/
+@import url('https://fonts.googleapis.com/css2?family=Tangerine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+/* General Styles */
+body {font-family: 'Montserrat', sans-serif;}
+h1, h2 {font-family: 'Tangerine', cursive;}
+
+/* Header and Nav */
+#header {position:absolute;width: 100%;text-align:right;font-size: 18px;text-transform:uppercase;letter-spacing:2px;z-index:100;}
+#header a{color: #fff;font-weight: normal;}
+#header a:hover {color: #777;}
+
+/* Banner */
+#banner img {top: -200px;}
+#banner:before{content:'';position:absolute;top:0;right:0;bottom:0;left:0;background:rgba(0,0,0,.4);}
+.caption{font-family: 'Tangerine', cursive;font-size:100px;position:absolute;bottom:0;width:100%;text-align:center;color: #fff;}
+
+/* Home Page */
+#main {background: #eee;padding: 50px 0;}
+#main h1 {font-size:82px;text-align: center;padding-bottom: 20px;}
+.main-content-image {padding-right: 20px;}
+#writing-samples {background: #333; text-align: center;padding: 50px 30px; color: #fff;background-image: url("https://www.transparenttextures.com/patterns/dark-wood.png");background-attachment: fixed;}
+#writing-samples h2 {padding-bottom: 20px;font-size: 72px;}
+.writing-samples-box-content{background:#000;margin:5px;font-size:22px;text-align:center;box-shadow: 0 0 10px #111;transition:all ease .7s;}
+.writing-samples-box-content:hover {transition: all ease .7s;transform: scale(1.03);}
+.writing-samples-box-content .writing-sample-title{display: flex;justify-content: center;align-items: center;color: #fff; padding:10px;font-weight:normal}
+
+/* Footer */
+footer {background: #000;color: #fff;padding: 20px 0;text-align: Center;font-size: 16px;letter-spacing: 2px;text-transform:uppercase;}
+footer a {color: #fff;font-weight: normal;}
+footer a:hover {color:#777;}
+
+/* Resonpsive Styles */
+@media screen and (max-width:1200px){.writing-samples-box-content{font-size:18px;}}
+@media screen and (max-width:992px){#banner img {top: 0;}.caption {font-size: 70px;}#main h1{font-size:66px;}#writing-samples h2{font-size:60px;}#header{font-size:14px;}}
+@media screen and (max-width:650px){#header{text-align:center;letter-spacing:0;}#menu-main-menu > li{padding:15px 5px;}.caption{font-size:38px;}#main h1{font-size:44px;}#writing-samples h2{font-size:40px;}footer{font-size:14px;letter-spacing:0;}}
+
+/* Animations */
+/* Fade In Up */
+@keyframes fadeInUp {
+    from {transform: translate3d(0,300px,0);opacity:0;}
+    to {transform: translate3d(0,0,0);opacity:1}
+}
+@-webkit-keyframes fadeInUp {
+    from {transform: translate3d(0,300px,0);opacity:0;}
+    to {transform: translate3d(0,0,0);opacity:1}
+}
+/* Fade In Up Small */
+@keyframes fadeInUpSm {
+    from {transform: translate3d(0,30px,0);opacity:0;}
+    to {transform: translate3d(0,0,0);opacity:1}
+}
+@-webkit-keyframes fadeInUpSm {
+    from {transform: translate3d(0,30px,0);opacity:0;}
+    to {transform: translate3d(0,0,0);opacity:1}
+}
+.animated {animation-duration: 1.3s;animation-fill-mode: both;-webkit-animation-duration: 1.3s;-webkit-animation-fill-mode: both}
+.fade-in-up {opacity: 0; animation-name: fadeInUp;-webkit-animation-name: fadeInUp;}
+.fade-in-up-sm {opacity: 0; animation-name: fadeInUpSm; -webkit-animation-name: fadeInUpSm;}
